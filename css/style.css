@@ -1,0 +1,122 @@
+/* RESET CSS */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
+}
+/* CABEÇALHO   */
+.hero{
+    width: 80%;
+    margin: auto;
+}
+.navbar{
+    margin: 30px auto; /*cima, direita, baixo, esquerda, cada valor é um lado*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*espaço entre os itens da lista*/
+}
+ul li{
+    display: inline-block;
+    margin: 0% 25px;
+}
+ul li a{
+    text-decoration: none;
+    color: #000;
+    padding: 0 10px;
+    position: relative;
+}
+ul li a::after{
+    content: '';
+    width: 0%;
+    height: 10px;
+    background-color: #f14a60;
+    position: absolute; /*a posição de acordo com o ponto de referencia, no caso a lista, ele é absoluto não se move se a lista não se mover*/
+    left: 50%;
+    transform: translateX(-50%); /*Faz o elemento se mover 2d*/
+    top: -55px;
+    transition: 1s;
+}
+ul li a:hover::after{
+    width: 100%;
+}
+.navbar-icon img{
+    height: 25px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+.navbar-icon{
+    margin-left: 40px;
+}
+/* MENU */
+.banner{
+    display: flex;
+    margin-top: 80px;
+}
+.left-colun, .right-colun{
+    flex-basis: 50%;
+}
+.right-colun img{
+    width: 100%;
+}
+.search-box{
+    width: 45%;
+    display: flex;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #ddd;
+    margin: 10px 0 30px;
+
+}
+.search-box img{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.search-box input{
+    width: 100%;
+    margin-left: 15px;
+    font-size: 17px;
+    border: 0;
+    outline: none;
+}
+.left-colun h1{
+    font-size: 100px;
+}
+.left-colun h3{
+    font-size: 28px;
+}
+span{
+    color: #f14a60;
+}
+.left-colun p{
+    font-size: 13px;
+    color: #999;
+    margin: 50px 0;
+}
+.btn button{
+    padding: 7px 30px;
+    border: 1px solid #fb7381;
+    margin-right: 15px;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer; 
+    color: #fb7381;
+    background: transparent;
+}
+.btn .primary-button{
+    background: linear-gradient(#fb7381, #f14a60);
+    box-shadow: 0 2px 15px rgba(248, 38, 103, 0.26);
+    color: #fff;
+}
+
+/* ENDPAGE */
+.social-icons{
+    width: 200px;
+    text-align: center;
+    opacity: .4;
+}
+.social-icons img{
+    height: 20px;
+    margin: 0 14px;
+    padding: 40px 0px;
+}
